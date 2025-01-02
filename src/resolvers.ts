@@ -1,18 +1,3 @@
-import { gql } from "apollo-server-express";
-
-const typeDefs = gql`
-  type Student {
-    id: Int!
-    name: String!
-    age: Int!
-  }
-
-  type Query {
-    students: [Student!]!
-    student(id: Int!): Student
-  }
-`;
-
 const resolvers = {
   Query: {
     students: () => {
@@ -28,4 +13,4 @@ const resolvers = {
   },
 };
 
-export { typeDefs, resolvers };
+export { resolvers };
